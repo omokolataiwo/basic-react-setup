@@ -1,0 +1,44 @@
+{
+  "name": "course-managment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/omokolataiwo/course-managment.git",
+  "author": "TAIWO KOLAWOLE <kolawole.taiwo@andela.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "webpack --config webpack.config.js -p",
+    "start": "cd web/public && serve",
+    "start:dev": "webpack-dev-server --config webpack.config.js --mode development"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "serve": "^10.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.5.2",
+    "react-dev-utils": "^6.0.5",
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.3.11",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
