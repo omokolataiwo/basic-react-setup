@@ -1,17 +1,15 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: [
-    'react-dev-utils/webpackHotDevClient',
-    __dirname + '/web/src/index.jsx',
-  ],
+  entry: ['react-dev-utils/webpackHotDevClient', path.join(__dirname, '/web/src/index.jsx')],
   output: {
-    path: __dirname + '/web/public',
+    path: path.join(__dirname, '/web/public'),
     publicPath: '/',
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: __dirname + '/web/public',
+    contentBase: path.join(__dirname, '/web/public'),
     hot: true,
     overlay: true,
   },

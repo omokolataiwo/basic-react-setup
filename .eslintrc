@@ -5,5 +5,17 @@
     "es6": true,
     "browser": true
   },
-  "parser": "babel-eslint"
-};
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "comma-dangle": ["error",{
+      "functions": "ignore"
+    }],
+    "no-shadow": "off"
+  }
+}
