@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import postMessage from './actions/postMessage';
 
-class App extends React.Component {
+export class App extends React.Component {
   static propTypes = {
     postMessage: PropTypes.func.isRequired,
     message: PropTypes.string
@@ -29,13 +29,14 @@ class App extends React.Component {
     const { message } = this.props;
     return (
       <div>
+        <h3>Simple React App</h3>
         <form onSubmit={e => this.postMessage(e)}>
           <input type="text" onChange={e => this.setState({ message: e.target.value })} />
           <button type="button" onClick={e => this.postMessage(e)}>Post Message</button>
         </form>
-        <h3>
+        <h2>
           {message}
-        </h3>
+        </h2>
       </div>
     );
   }
