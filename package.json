@@ -55,6 +55,7 @@
     "react-dev-utils": "^6.0.5",
     "react-hot-loader": "^4.3.11",
     "redux-devtools-extension": "^2.13.5",
+    "redux-mock-store": "^1.5.3",
     "sane": "^4.0.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.22.0",
@@ -64,7 +65,10 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "web/src/**/*.{js,jsx}"
+      "web/src/**/*.{js,jsx}",
+      "!web/src/reducers/index.js",
+      "!web/src/store/index.js",
+      "!web/src/index.jsx"
     ],
     "coverageThreshold": {
       "global": {

@@ -29,10 +29,10 @@ export class App extends React.Component {
     const { message } = this.props;
     return (
       <div>
-        <h3>Simple React App*</h3>
-        <form onSubmit={e => this.postMessage(e)}>
-          <input type="text" onChange={e => this.setState({ message: e.target.value })} />
-          <button type="button" onClick={e => this.postMessage(e)}>Post Message</button>
+        <h3>Simple React App</h3>
+        <form id="message-form" onSubmit={e => this.postMessage(e)}>
+          <input id="message" type="text" onChange={e => this.setState({ message: e.target.value })} />
+          <button id="post-message-btn" type="button" onClick={e => this.postMessage(e)}>Post Message</button>
         </form>
         <h2>
           {message}
