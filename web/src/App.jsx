@@ -29,7 +29,7 @@ export class App extends React.Component {
     const { message } = this.props;
     return (
       <div>
-        <h3>Simple React App</h3>
+        <h3>Simple React App*</h3>
         <form onSubmit={e => this.postMessage(e)}>
           <input type="text" onChange={e => this.setState({ message: e.target.value })} />
           <button type="button" onClick={e => this.postMessage(e)}>Post Message</button>
